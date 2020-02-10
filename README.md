@@ -1,2 +1,29 @@
-UNO GAME!
-Wireframe in images/ directory!
+2-Player UNO GAME
+by Nikita Madora
+
+WHAT IS THIS PROJECT?
+
+
+WHY DID I MAKE IT?
+
+
+USER STORIES
+
+
+TECHNOLOGIES USED
+
+
+APPROACH TAKEN
+
+
+INSTALLATION INSTRUCTIONS
+
+
+UNSOLVED PROBLEMS
+
+
+OTHER COMPONENTS PREVIOUSLY INDICATED (if applicable)
+
+
+WIREFRAMES
+Available in the images/ directory.
