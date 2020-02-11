@@ -1,6 +1,10 @@
 console.log("sanity check");
 
 const game = {
+     catBox: [],
+     playerHouse: [],
+     cpuHouse: [],
+
      cats: {
           moods: ["happy", "neutral", "angery", "sleeping"],
           colors: ["pink", "orange", "golden", "green", "blue", "purple", "soot", "biscuits", "ghost"]
@@ -13,15 +17,40 @@ const game = {
           // select a random color, save to variable newCatColor
           const newCatColor = this.cats.colors[Math.floor(Math.random())];
           // create a div element with class values that map to the corresponding css classes
-          const newCat = document.createElement("div")
-          newCat.setAttribute("class", newCatMood + " " + newCatColor);
+          const newCat = document.createElement("div");
+          newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
           // append the cat to the dom
           document.querySelector("#kittenFactory").appendChild(newCat);
      },
 
-     catBox: [],
-     playerHouse: [],
-     cpuHouse: [],
+     // Fill the computer house and the player's house with cats!
+     populateHouses() {
+
+     },
+
+     // When user selects a cat from their house, it's placed into the box. This triggers the computer's turn
+     putCatInBox() {
+
+     },
+
+     // The computer selects a matching cat(check for match), and then puts it into the box
+     cpuTurn() {
+
+     },
+
+     // Computer's dumb brain
+     cpuCheckForMatch() {
+          // Loop through the computer's hand
+          // If the cat matches the previous cat, put it in the box
+          // If there are no matches, (draw cat from factory)
+     },
+
+     // Trigger the end of game result screen
+     endGame() {
+          // When the computer or user runs out of cats, trigger the end of game screen
+     }
+
+    
 
      // makeAngery() {
      //      const angeryCat = document.createElement("div");
