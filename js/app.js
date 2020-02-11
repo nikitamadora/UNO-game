@@ -10,8 +10,9 @@ const game = {
           colors: ["pink", "orange", "golden", "green", "blue", "purple", "soot", "biscuits", "ghost"]
      },
 
-     makeCats() {
-          // combine a cat mood with a cat color from the object
+     makeCat() {
+          // All cats must come with a mood and a color, and then they need to exist within the HTML.
+          // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
           // select a random mood, save to variable newCatMood
           const newCatMood = this.cats.moods[Math.floor(Math.random())];
           // select a random color, save to variable newCatColor

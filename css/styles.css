@@ -63,11 +63,11 @@ body {
 
 
 #computerContainer {
-     width: 100%;
+     background-color: lightcoral;
 }
 
 #playerContainer {
-     width: 100%;
+     background-color: hotpink;
 }
 
 h1 {
