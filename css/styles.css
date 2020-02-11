@@ -56,11 +56,10 @@ body {
      padding: 35px;
 }
 
-#container {
-     top: 50%;
-     left: 50%;
-     position: absolute;
-}
+/* .container {
+     display: flex;
+     flex-wrap: wrap;
+} */
 
 #gameContainer {
      width: 70%;
@@ -69,7 +68,7 @@ body {
      border: 1px solid #E0E0E0;
      background-color: #FFFFFF;
      /* overflow-x: hidden; */
-   }
+}
 
 #computerContainer {
      width: 100%;
@@ -86,13 +85,17 @@ h1 {
 }
 
 /* Cats */
+.cat {
+     padding: 5px;
+     width: 100px;
+     height: 100px;
+
+}
 
 .pink {
-     background-image: url("../images/pink-ball.png");
-     /* background-color: pink; */
-     padding: 5px;
-     width: 95px;
-     height: 95px;
+     /* background-image: url("../images/pink-ball.png"); */
+     background-color: pink;
+     border-radius: 50%  ;
 }
 
 .angery {
