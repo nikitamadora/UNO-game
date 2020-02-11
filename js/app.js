@@ -13,13 +13,17 @@ const game = {
      makeCat() {
           // All cats must come with a mood and a color, and then they need to exist within the HTML.
           // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
+
           // select a random mood, save to variable newCatMood
-          const newCatMood = this.cats.moods[Math.floor(Math.random())];
+          const newCatMood = this.cats.moods[Math.floor(Math.random()*4)];
           // select a random color, save to variable newCatColor
-          const newCatColor = this.cats.colors[Math.floor(Math.random())];
+          const newCatColor = this.cats.colors[Math.floor(Math.random()*9)];
           // create a div element with class values that map to the corresponding css classes
           const newCat = document.createElement("div");
           newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
+          // add a (temporary) text face to stand in until graphics are made
+          const catFace = document.createTextNode(newCatMood);
+          newCat.appendChild(catFace);
           // append the cat to the dom
           document.querySelector("#kittenFactory").appendChild(newCat);
      },
