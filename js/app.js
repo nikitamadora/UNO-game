@@ -16,8 +16,7 @@ const game = {
           const newCat = document.createElement("div")
           newCat.setAttribute("class", newCatMood + " " + newCatColor);
           // append the cat to the dom
-          document.querySelector("#kittenGenerator").appendChild(newCat);
-          // return created cat?
+          document.querySelector("#kittenFactory").appendChild(newCat);
      },
 
      catBox: [],
