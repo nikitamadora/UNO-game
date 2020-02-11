@@ -61,14 +61,6 @@ body {
      flex-wrap: wrap;
 } */
 
-#gameContainer {
-     width: 70%;
-     margin: 0 auto;
-     padding: 0% 5% 2.5% 5%;
-     border: 1px solid #E0E0E0;
-     background-color: #FFFFFF;
-     /* overflow-x: hidden; */
-}
 
 #computerContainer {
      width: 100%;
@@ -89,17 +81,63 @@ h1 {
      padding: 5px;
      width: 100px;
      height: 100px;
-
+     font-weight: 100;
+     font-size: 18px;
+     border-radius: 50%;
 }
 
-.pink {
-     /* background-image: url("../images/pink-ball.png"); */
-     background-color: pink;
-     border-radius: 50%  ;
+/* Moods */
+
+.happy {
+     font-size: 20px;
+}
+
+.neutral {
+     font-size: 20px;
 }
 
 .angery {
-     font-family: "helvetica neue", sans-serif;
-     font-weight: 100px;
-     font-size: 14px;
+     font-size: 20px;
+}
+
+.sleeping {
+     font-size: 20px;
+}
+
+/* Colors */
+
+.pink {
+     background-image: url("../images/pink-ball.png");
+}
+
+.orange {
+     background-image: url("../images/orange-ball.png");
+}
+
+.golden {
+     background-color: goldenrod;
+}
+
+.green {
+     background-image: url("../images/green-ball.png");
+}
+
+.blue {
+     background-color: teal;
+}
+
+.purple {
+     background-image: url("../images/purple-ball.png");
+}
+
+.soot {
+     background-color: #181818;
+}
+
+.biscuits {
+     background-color: beige;
+}
+
+.ghost {
+     background-color: #818181
 }
