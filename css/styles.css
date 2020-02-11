@@ -55,33 +55,7 @@ table {
 body {
      /* padding: 35px; */
      /* display: flex; */
-}
-
-#gameContainer {
-     display: flex;
-     flex-direction: column;
-     width: 100vw;
-     height: 70vh;
-     margin: auto;
-}
-
-
-#cpuContainer {
-     display: flex;
-     background-color: lightcoral;
-     width: 100vw;
-     height: 50vh;
-     justify-content: space-around;
-}
-
-#playerContainer {
-     display: flex;
-     background-color: hotpink;
-     width: 100vw;
-     height: 50vh;
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
+     color: aliceblue;
 }
 
 h1 {
@@ -89,6 +63,41 @@ h1 {
      font-weight: 100;
      font-size: 32px;
 }
+
+#gameContainer {
+     display: flex;
+     flex-direction: column;
+     padding: 5vh 0 0 0;
+     width: 100vw;
+     height: 90vh;
+     margin: 0 auto;
+}
+
+
+#cpuContainer {
+     display: flex;
+     background-color: lightcoral;
+     width: 100vw;
+     height: 33vh;
+     justify-content: space-around;
+}
+
+#boxContainer {
+     display: flex;
+     background-color: yellowgreen;
+     height: 34vh
+}
+
+#playerContainer {
+     display: flex;
+     background-color: hotpink;
+     width: 100vw;
+     height: 33vh;
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+}
+
 
 /* Cats */
 .cat {
@@ -100,7 +109,7 @@ h1 {
      font-weight: 100;
      font-size: 18px;
      border-radius: 50%;
-     margin: 5px;
+     margin: -20px;
 }
 
 /* Moods */
@@ -108,7 +117,6 @@ h1 {
 .happy {
      font-size: 20px;
      display: flex;
-     align-content: center;
 }
 
 .neutral {
