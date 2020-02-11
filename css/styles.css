@@ -49,8 +49,34 @@ table {
 
 /* ^ CSS RESET ^ */
 
+
+/* GLOBAL */
+
 body {
      padding: 35px;
+}
+
+#container {
+     top: 50%;
+     left: 50%;
+     position: absolute;
+}
+
+#gameContainer {
+     width: 70%;
+     margin: 0 auto;
+     padding: 0% 5% 2.5% 5%;
+     border: 1px solid #E0E0E0;
+     background-color: #FFFFFF;
+     /* overflow-x: hidden; */
+   }
+
+#computerContainer {
+     width: 100%;
+}
+
+#playerContainer {
+     width: 100%;
 }
 
 h1 {
