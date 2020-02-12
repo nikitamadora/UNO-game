@@ -48,9 +48,8 @@ const game = {
           document.querySelector("#cpuContainer").appendChild(newCat);
      },
 
-     // TODO Figure out how to connect the playerDraw() with makeCat() so there aren't two make cat functions
      // playerDraw() {
-     //      document.querySelector("#playerContainer").appendChild(makeCat(#playerContainer));
+     //      this.makePlayerCat();
      // },
 
      // Fill the computer house and the player's house with cats!
@@ -81,23 +80,26 @@ const game = {
 
      checkForMatch() {
           console.log("click!", this)
-          // <div class="neutral purple cat">neutral</div>);
-          // this.setAttribute("class")
           // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
+
           // variable that references the card at the top of the box array
           const topCat = game.catBox[game.catBox.length - 1];
+
           // variable that references the div that the user clicked
           const userChoice = this;
+
           // get the classList of the catBox element
           const topCatClasses = topCat.classList;
+
           // get the classList of the userChoice
           const userChoiceClasses = userChoice.classList;
-          // console.log(topCatClasses, userChoiceClasses);
-          // MAYBE LATER, brute force first loop through and compare the first two class names (.cat is irrelevant)
+
           // Since the first index value of each class array is always a mood class, and the second is always a color, only two comparisons are necessary. :)
           if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
                game.catBox.push(userChoice);
                document.querySelector("#box").appendChild(userChoice);
+               // game.cpuTurn();
+               setTimeout(game.cpuTurn, 1250);
           };
           // Otherwise, do nothing
           // TODO Stretch Goal: trigger a shake animation on the div.
@@ -105,6 +107,8 @@ const game = {
 
           // };
      },
+
+     
 
      // TODO 
      // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn. This is currently wrapped up in the checkForMatch function, but I'd like to separate them to optimize.
