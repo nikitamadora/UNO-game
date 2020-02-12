@@ -108,7 +108,8 @@ const game = {
           // };
      },
 
-     // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn
+     // TODO 
+     // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn. This is currently wrapped up in the checkForMatch function, but I'd like to separate them to optimize.
      putCatInBox() {
           // move the cat to the top of the catBox[]
           
@@ -117,14 +118,29 @@ const game = {
 
      // The computer selects a matching cat(check for match), and then puts it into the box
      cpuTurn() {
+          // CPU hand exists within the dom html
+          // Find where it is
+          const cpuHand = document.querySelector("#cpuContainer").childNodes;
+          // loop through the child nodes
+          for (let i = 0; i < cpuHand.length; i++) {
+               // retrieve a classList from the element
+               const catClasses = cpuHand[i].classList;
+               // compare the classes to the ones on the top cat
+               const topCat = game.catBox[game.catBox.length - 1]; 
+               // if there is a match 
+          };
+          
+          const cpuHandClasses = cpuHand.classList;
+          // EITHER loop through the classlist and select the first match, OR choose a random index value and if it matches, play it. Continue choosing a random number until it matches.
+          console.log(cpuHand, cpuHandClasses);
 
+          // If there are no matches, make a new cpu cat
+
+          // Trigger end of cpu turn
      },
 
-     // Computer's dumb brain
-     cpuPlay() {
-          // Loop through the computer's hand
-          // If the cat matches the previous cat, put it in the box
-          // If there are no matches, (draw cat from factory)
+     endCpuTurn() {
+          // Show div that says "Your turn"
      },
 
      // Trigger the end of game result screen

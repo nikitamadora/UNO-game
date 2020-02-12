@@ -125,7 +125,7 @@ h1 {
 #box .cat {
      /* Position all cats in the box absolutely, relative to the box parent */
      position: absolute;
-     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+     /* box-shadow: 1px 1px 1px rgba(0,0,0,.3); */
  }
  
 
