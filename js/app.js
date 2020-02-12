@@ -60,8 +60,9 @@ const game = {
           };
      },
 
-     // When user selects a cat from their house, it's placed into the box. This triggers the computer's turn
+     // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn
      putCatInBox() {
+          // move the cat to the top of the [box stack]
 
      },
 
@@ -81,15 +82,8 @@ const game = {
      endGame() {
           // When the computer or user runs out of cats, trigger the end of game screen
      }
-    
 
-     // makeAngery() {
-     //      const angeryCat = document.createElement("div");
-     //      // angeryCat.setAttribute("class", //Random Color);
 
-     //      const textFace = document.createTextNode("angery");
-     //      angeryCat.appendChild(textFace);
-     // }
 
 };
 
