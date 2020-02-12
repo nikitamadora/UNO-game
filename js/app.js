@@ -52,8 +52,12 @@ const game = {
      // },
 
      // Fill the computer house and the player's house with cats!
+     // TODO Stretch Goal: Animate the kittens popping into the window
      populateHouses() {
-          
+          for (let i = 0; i < 7; i++) {
+               this.makeCpuCat();
+               this.makePlayerCat();
+          };
      },
 
      // When user selects a cat from their house, it's placed into the box. This triggers the computer's turn
@@ -89,9 +93,9 @@ const game = {
 
 };
 
-window.onload = () => {
-     game.populateHouses();
-};
+// window.onload = () => {
+//      game.populateHouses();
+// };
 
 // Can create an element in js, and give it a class, based on this array of strings
 // Then I could append it to the html in the dom
