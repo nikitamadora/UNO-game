@@ -87,28 +87,31 @@ const game = {
           // this.setAttribute("class")
           // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
           // variable that references the card at the top of the box array
-          const topCat = game.catBox[0];
+          const topCat = game.catBox[game.catBox.length - 1];
           // variable that references the div that the user clicked
           const userChoice = this;
           // get the classList of the catBox element
           const topCatClasses = topCat.classList;
           // get the classList of the userChoice
           const userChoiceClasses = userChoice.classList;
+          // console.log(topCatClasses, userChoiceClasses);
           // MAYBE LATER, brute force first loop through and compare the first two class names (.cat is irrelevant)
-          // Since the first index value of each class array is always a mood class, and the second is always 
+          // Since the first index value of each class array is always a mood class, and the second is always a color, only two comparisons are necessary. :)
           if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
-
-          }
-          // Otherwise, trigger a shake animation on the div
-          else {
-
+               game.catBox.push(userChoice);
+               document.querySelector("#box").appendChild(userChoice);
           };
+          // Otherwise, do nothing
+          // TODO Stretch Goal: trigger a shake animation on the div.
+          // else {
+
+          // };
      },
 
      // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn
      putCatInBox() {
           // move the cat to the top of the catBox[]
-          console.log(this);
+          
           // game.catBox.push(this)
      },
 
