@@ -93,9 +93,9 @@ const game = {
 
 };
 
-// window.onload = () => {
-//      game.populateHouses();
-// };
+window.onload = () => {
+     game.populateHouses();
+};
 
 // Can create an element in js, and give it a class, based on this array of strings
 // Then I could append it to the html in the dom

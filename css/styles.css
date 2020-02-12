@@ -112,6 +112,14 @@ h1 {
      flex-wrap: wrap;
 }
 
+#box {
+     background-image: url("../images/box-placeholder.png");
+     /* background-color: gray; */
+     width: 100px;
+     height: 100px;
+     margin: 0 auto;
+}
+
 
 /* Cats */
 .cat {
