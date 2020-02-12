@@ -46,8 +46,6 @@ const game = {
           newCat.appendChild(catFace);
           // append the cat to the dom?
           document.querySelector("#cpuContainer").appendChild(newCat);
-
-          newCat.addEventListener("click", this.checkForMatch);
      },
 
      // TODO Figure out how to connect the playerDraw() with makeCat() so there aren't two make cat functions
@@ -122,12 +120,29 @@ const game = {
           // Find where it is
           const cpuHand = document.querySelector("#cpuContainer").childNodes;
           // loop through the child nodes
+          let matched = null;
+          // This loops through the
           for (let i = 0; i < cpuHand.length; i++) {
+               const cpuChoice = cpuHand[i];
                // retrieve a classList from the element
-               const catClasses = cpuHand[i].classList;
-               // compare the classes to the ones on the top cat
+               const catClasses = cpuChoice.classList;
+               // find the top cat element
                const topCat = game.catBox[game.catBox.length - 1]; 
-               // if there is a match 
+               // retrieve the classList from the top cat
+               const topCatClasses = topCat.classList;
+               // Compare the classes for a match! If there is one, add that cat to the top of the box.
+               if (catClasses[0] === topCatClasses[0] || catClasses[1] === topCatClasses[1]) {
+                    game.catBox.push(cpuChoice);
+                    document.querySelector("#box").appendChild(cpuChoice);
+                    matched = true;
+               }
+               // If there is not a match in the whole array, add one cat to the cpu hand.
+               else {
+                    matched = false;
+               };
+          if (matched === false) {
+               game.makeCpuCat();
+          };
           };
           
           const cpuHandClasses = cpuHand.classList;
