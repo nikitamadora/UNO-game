@@ -58,7 +58,7 @@ body {
      color: aliceblue;
 }
 
-h1, h2 {
+h1 {
      font-family: "helvetica neue", sans-serif;
      font-weight: 100;
      font-size: 32px;
@@ -118,8 +118,16 @@ h1, h2 {
      width: 100px;
      height: 100px;
      margin: 0 auto;
+     /* Relative sets a rule for child elements */
+     position: relative;
 }
 
+#box .cat {
+     /* Position all cats in the box absolutely, relative to the box parent */
+     position: absolute;
+     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+ }
+ 
 
 /* Cats */
 .cat {
