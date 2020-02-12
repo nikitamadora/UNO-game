@@ -75,17 +75,6 @@ h1 {
      margin: 0 auto;
 }
 
-
-/* #cpuContainer {
-     display: flex;
-     flex-wrap: wrap;
-     background-color: lightcoral;
-     width: 100vw;
-     height: 33vh;
-     justify-content: space-around;
-     align-items: center;
-} */
-
 #cpuContainer {
      /* background-color: lightcoral; */
      margin: 0 auto;
@@ -102,10 +91,26 @@ h1 {
      height: 34vh
 }
 
+#pass {
+     width: 100px;
+     height: 45px;
+     border: none;
+     background-color: yellowgreen;
+}
+
 #playerContainer {
      /* background-color: hotpink; */
      margin: 0 auto;
-     width: 90vw;
+     width: 100vw;
+     height: 33vh;
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+}
+
+#house {
+     margin: 0 auto;
+     width: 80vw;
      height: 33vh;
      display: flex;
      justify-content: space-around;
