@@ -26,6 +26,8 @@ const game = {
           newCat.appendChild(catFace);
           // append the cat to the dom?
           document.querySelector("#playerContainer").appendChild(newCat);
+          //
+          newCat.addEventListener("click", this.checkForMatch);
      },
 
      makeCpuCat() {
@@ -42,10 +44,10 @@ const game = {
           // add a (temporary) text face to stand in until graphics are made
           const catFace = document.createTextNode(newCatMood);
           newCat.appendChild(catFace);
-          // add event listener to the cat so it can respond to user input
-          newCat.addEventListener("click", checkForMatch());
           // append the cat to the dom?
           document.querySelector("#cpuContainer").appendChild(newCat);
+
+          newCat.addEventListener("click", this.checkForMatch);
      },
 
      // TODO Figure out how to connect the playerDraw() with makeCat() so there aren't two make cat functions
@@ -62,15 +64,45 @@ const game = {
           };
      },
 
+     initCatInBox() {
+          // select a random mood, save to variable newCatMood
+          const newCatMood = this.cats.moods[Math.floor(Math.random()*4)];
+          // select a random color, save to variable newCatColor
+          const newCatColor = this.cats.colors[Math.floor(Math.random()*9)];
+          // create a div element with class values that map to the corresponding css classes
+          const newCat = document.createElement("div");
+          newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
+          // add a (temporary) text face to stand in until graphics are made
+          const catFace = document.createTextNode(newCatMood);
+          newCat.appendChild(catFace);
+          this.catBox.push(newCat);
+     },
+
      checkForMatch() {
+          console.log("click!", this)
+          // <div class="neutral purple cat">neutral</div>);
+          // this.setAttribute("class")
           // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
+          
+          // variable that references the card at the top of the box array
+          const topCat = game.catBox[0];
+          // variable that references the div that the user clicked
+          const userChoice = this;
+
+          if (false) {
+
+          }
           // Otherwise, trigger a shake animation on the div
+          else {
+
+          };
      },
 
      // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn
      putCatInBox() {
-          // move the cat to the top of the [box stack]
-
+          // move the cat to the top of the catBox[]
+          console.log(this);
+          // game.catBox.push(this)
      },
 
      // The computer selects a matching cat(check for match), and then puts it into the box
@@ -79,7 +111,7 @@ const game = {
      },
 
      // Computer's dumb brain
-     cpuDumbBrain() {
+     cpuPlay() {
           // Loop through the computer's hand
           // If the cat matches the previous cat, put it in the box
           // If there are no matches, (draw cat from factory)
@@ -96,6 +128,7 @@ const game = {
 
 window.onload = () => {
      game.populateHouses();
+     game.initCatInBox();
 };
 
 // Can create an element in js, and give it a class, based on this array of strings
