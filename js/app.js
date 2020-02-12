@@ -42,6 +42,8 @@ const game = {
           // add a (temporary) text face to stand in until graphics are made
           const catFace = document.createTextNode(newCatMood);
           newCat.appendChild(catFace);
+          // add event listener to the cat so it can respond to user input
+          newCat.addEventListener("click", checkForMatch());
           // append the cat to the dom?
           document.querySelector("#cpuContainer").appendChild(newCat);
      },
@@ -60,6 +62,11 @@ const game = {
           };
      },
 
+     checkForMatch() {
+          // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
+          // Otherwise, trigger a shake animation on the div
+     },
+
      // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn
      putCatInBox() {
           // move the cat to the top of the [box stack]
@@ -72,7 +79,7 @@ const game = {
      },
 
      // Computer's dumb brain
-     cpuCheckForMatch() {
+     cpuDumbBrain() {
           // Loop through the computer's hand
           // If the cat matches the previous cat, put it in the box
           // If there are no matches, (draw cat from factory)
