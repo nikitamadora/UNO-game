@@ -78,7 +78,7 @@ h1 {
 #cpuContainer {
      /* background-color: lightcoral; */
      margin: 0 auto;
-     width: 90vw;
+     width: 80vw;
      height: 33vh;
      display: flex;
      flex-wrap: wrap;
@@ -89,32 +89,6 @@ h1 {
      display: flex;
      /* background-color: yellowgreen; */
      height: 34vh
-}
-
-#pass {
-     width: 100px;
-     height: 45px;
-     border: none;
-     background-color: yellowgreen;
-}
-
-#playerContainer {
-     /* background-color: hotpink; */
-     margin: 0 auto;
-     width: 100vw;
-     height: 33vh;
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
-}
-
-#house {
-     margin: 0 auto;
-     width: 80vw;
-     height: 33vh;
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
 }
 
 #box {
@@ -132,6 +106,38 @@ h1 {
      position: absolute;
      /* box-shadow: 1px 1px 1px rgba(0,0,0,.3); */
  }
+
+#pass {
+     width: 80px;
+     height: 45px;
+     border: none;
+     border-radius: 40% 40% 40% 10%;
+     background-color: yellowgreen;
+     color: beige;
+     font-family: "helvetica neue", sans-serif;
+     font-size: 18px;
+     font-weight: 200;
+     /* margin: 0 500px; */
+}
+
+#playerContainer {
+     /* background-color: hotpink; */
+     margin: 0 auto;
+     width: 80vw;
+     height: 33vh;
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+}
+
+#house {
+     margin: 0 auto;
+     width: 90vw;
+     /* height: 33vh; */
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+}
  
 
 /* Cats */
@@ -174,7 +180,6 @@ h1 {
 
 .happy {
      font-size: 20px;
-     display: flex;
 }
 
 .neutral {

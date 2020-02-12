@@ -15,7 +15,7 @@ const game = {
           // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
 
           // select a random mood, save to variable newCatMood
-          const newCatMood = this.cats.moods[Math.floor(Math.random()*4)];
+          const newCatMood = this.cats.moods[Math.floor(Math.random()*5)];
           // select a random color, save to variable newCatColor
           const newCatColor = this.cats.colors[Math.floor(Math.random()*9)];
           // create a div element with class values that map to the corresponding css classes
@@ -109,7 +109,9 @@ const game = {
           // };
      },
 
-     
+     passTurn() {
+          this.makePlayerCat();
+     },
 
      // TODO 
      // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn. This is currently wrapped up in the checkForMatch function, but I'd like to separate them to optimize.
@@ -159,37 +161,39 @@ const game = {
      refillHouse() {
           // Look at all those cats in the box!
           const catsInBox = document.querySelector("#box").childNodes
+
           // See how many cats are in the box
           const numCatsInBox = catsInBox.length;
+
           // Get a random number of those cats
           const randomNumOfCats = Math.floor(Math.random()*numCatsInBox);
-          console.log(numCatsInBox, randomNumOfCats);
+
+          // Add that many cats to either the computer or the player
+          // TODO Stretch goal ^^^
      },
 
      // Trigger the end of game result screen
      endGame() {
           // When the computer or user runs out of cats, trigger the end of game screen
+     },
+
+     // TODO Fix me!
+     // Attempt to make a pass button
+     passButton() {
+          // Find the pass button in the HTML!
+          const button = document.querySelector("#pass");
+          this.makePlayerCat();
+          button.addEventListener("click", game.makePlayerCat);
      }
 
-
-
 };
+
+// Another attempt to make the pass button
+const passButton = document.querySelector("#pass");
+passButton.addEventListener("click", game.makePlayerCat);
 
 window.onload = () => {
      game.populateHouses();
      game.initCatInBox();
+     // game.passButton();
 };
-
-// Can create an element in js, and give it a class, based on this array of strings
-// Then I could append it to the html in the dom
-// Then, if there are css styles that map to an existing class (ie. .pink ), they will automatically apply to the new element
-// Those css properties can include background images, or to start, background colors, border color, etc. 
-
-// Establish all of the variables I'm going to need to construct the board
-
-// Write code to make cats
-
-// On load, the cats populate/are dealt into the player's hand
-// When a user clicks on a cat, the game checks to make sure the cat can be played into the box. If it can't, the cat shakes (stretch goal).
-// After the user puts one cat in the box, the computer takes a turn.
-// 
