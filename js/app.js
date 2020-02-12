@@ -140,18 +140,10 @@ const game = {
                else {
                     matched = false;
                };
+          };
           if (matched === false) {
                game.makeCpuCat();
           };
-          };
-          
-          const cpuHandClasses = cpuHand.classList;
-          // EITHER loop through the classlist and select the first match, OR choose a random index value and if it matches, play it. Continue choosing a random number until it matches.
-          console.log(cpuHand, cpuHandClasses);
-
-          // If there are no matches, make a new cpu cat
-
-          // Trigger end of cpu turn
      },
 
      endCpuTurn() {
