@@ -188,9 +188,23 @@ const game = {
 
 };
 
+
+
+
+
+
+
+
+
+
 // Another attempt to make the pass button
 const passButton = document.querySelector("#pass");
 passButton.addEventListener("click", game.makePlayerCat);
+
+
+//-------//
+// On Page Load, Build the Board //
+//-------//
 
 window.onload = () => {
      game.populateHouses();
