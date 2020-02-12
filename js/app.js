@@ -135,6 +135,7 @@ const game = {
                     game.catBox.push(cpuChoice);
                     document.querySelector("#box").appendChild(cpuChoice);
                     matched = true;
+                    return "done";
                }
                // If there is not a match in the whole array, add one cat to the cpu hand.
                else {
