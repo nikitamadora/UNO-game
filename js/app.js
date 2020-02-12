@@ -25,8 +25,8 @@ const game = {
           const catFace = document.createTextNode(newCatMood);
           newCat.appendChild(catFace);
           // append the cat to the dom?
-          document.querySelector("#playerContainer").appendChild(newCat);
-          //
+          document.querySelector("#house").appendChild(newCat);
+          // if a user clicks on one of their cats, trigger checkForMatch() on the cat selected
           newCat.addEventListener("click", this.checkForMatch);
      },
 
@@ -46,6 +46,7 @@ const game = {
           newCat.appendChild(catFace);
           // append the cat to the dom?
           document.querySelector("#cpuContainer").appendChild(newCat);
+          
      },
 
      // playerDraw() {
@@ -153,6 +154,16 @@ const game = {
 
      endCpuTurn() {
           // Show div that says "Your turn"
+     },
+
+     refillHouse() {
+          // Look at all those cats in the box!
+          const catsInBox = document.querySelector("#box").childNodes
+          // See how many cats are in the box
+          const numCatsInBox = catsInBox.length;
+          // Get a random number of those cats
+          const randomNumOfCats = Math.floor(Math.random()*numCatsInBox);
+          console.log(numCatsInBox, randomNumOfCats);
      },
 
      // Trigger the end of game result screen
