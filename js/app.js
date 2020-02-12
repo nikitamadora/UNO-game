@@ -76,20 +76,27 @@ const game = {
           const catFace = document.createTextNode(newCatMood);
           newCat.appendChild(catFace);
           this.catBox.push(newCat);
+          document.querySelector("#box").appendChild(newCat);
      },
+
+     // TODO Make game.catBox[] appear over the cat box div on the browser
 
      checkForMatch() {
           console.log("click!", this)
           // <div class="neutral purple cat">neutral</div>);
           // this.setAttribute("class")
           // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
-          
           // variable that references the card at the top of the box array
           const topCat = game.catBox[0];
           // variable that references the div that the user clicked
           const userChoice = this;
-
-          if (false) {
+          // get the classList of the catBox element
+          const topCatClasses = topCat.classList;
+          // get the classList of the userChoice
+          const userChoiceClasses = userChoice.classList;
+          // MAYBE LATER, brute force first loop through and compare the first two class names (.cat is irrelevant)
+          // Since the first index value of each class array is always a mood class, and the second is always 
+          if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
 
           }
           // Otherwise, trigger a shake animation on the div
