@@ -8,7 +8,7 @@ const game = {
           colors: ["pink", "orange", "golden", "green", "blue", "purple", "soot", "biscuits", "ghost"]
      },
 
-     
+
 
      makePlayerCat() {
           // All cats must come with a mood and a color, and then they need to exist within the HTML.
@@ -50,12 +50,7 @@ const game = {
           
      },
 
-     // playerDraw() {
-     //      this.makePlayerCat();
-     // },
-
      // Fill the computer house and the player's house with cats!
-     // TODO Stretch Goal: Animate the kittens popping into the window
      populateHouses() {
           for (let i = 0; i < 7; i++) {
                this.makeCpuCat();
@@ -80,13 +75,7 @@ const game = {
 
      // TODO Make game.catBox[] appear over the cat box div on the browser
 
-     shakeCat() {
-          // Toggle the shake class on
-
-          // After a small delay, toggle it off again so it can be called again
-
-     },
-
+     // Player's whole turn
      checkForMatch() {
           console.log("click!", this)
           // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
@@ -105,9 +94,13 @@ const game = {
 
           // Since the first index value of each class array is always a mood class, and the second is always a color, only two comparisons are necessary. :)
           if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
+               // If there's a match, push the user's choice to the top of the catBox array
                game.catBox.push(userChoice);
+               // Append the user's choice to the DOM as well so it's visible
                document.querySelector("#box").appendChild(userChoice);
-               // Toggle off the animation?
+               // Check to see if the player's hand is empty. If it is, trigger a win. 
+               
+               // Otherwise, trigger the computer's turn after a delay
                setTimeout(game.cpuTurn, 1250);
           }
           // TODO Stretch Goal: trigger a shake animation on the div.
@@ -116,10 +109,6 @@ const game = {
                userChoiceClasses.toggle("shake");
                setTimeout(function() { userChoiceClasses.toggle("shake")}, 1000 );
           };
-     },
-
-     passTurn() {
-          this.makePlayerCat();
      },
 
      // The computer selects a matching cat(check for match), and then puts it into the box

@@ -59,15 +59,34 @@ body {
 }
 
 header {
-     height: 80px;
+     padding: 10px 0 100px 0;
 }
-
+/* can i chain these like with classes? */
 h1 {
      font-family: "helvetica neue", sans-serif;
      font-weight: 100;
      font-size: 32px;
      color: #818181;
      padding: 0 0 0 35px;
+}
+
+h2 {
+     font-family: "helvetica neue", sans-serif;
+     font-weight: 100;
+     font-size: 32px;
+     color: #818181;
+     padding: 35px;
+}
+
+p {
+     /* display: flex; */
+     /* align-content: center; */
+     text-align: center;
+     padding: 15%;
+     font-family: "helvetica neue", sans-serif;
+     font-size: 20px;
+     font-weight: 200;
+     line-height: 2.5em;
 }
 
 #gameContainer {
@@ -158,10 +177,6 @@ h1 {
      margin: -10px;
 }
 
-.cat.shake {
-     animation: shake 1s /* cubic-bezier(.09,.97,.09,.97) both; */
-}
-
 /* Moods */
 
 .happy {
@@ -221,14 +236,20 @@ h1 {
 /* MODALS */
 
 .modal {
-     background-color: #999999;
+     background-color: gainsboro;
      position: absolute;
      width: 90%;
-     height: 85%;
+     height: 87%;
      top: 10%;
      left: 5%;
-     transition-timing-function: ease;
+     /* transition-timing-function: ease; */
      z-index: 1;
+     border: none;
+     border-radius: 20px;
+}
+
+.startScreen {
+     display: block;
 }
 
 .modal.hide {
