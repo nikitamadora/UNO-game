@@ -15,9 +15,9 @@ const game = {
           // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
 
           // select a random mood, save to variable newCatMood
-          const newCatMood = this.cats.moods[Math.floor(Math.random()*5)];
+          const newCatMood = game.cats.moods[Math.floor(Math.random()*3.99)];
           // select a random color, save to variable newCatColor
-          const newCatColor = this.cats.colors[Math.floor(Math.random()*9)];
+          const newCatColor = game.cats.colors[Math.floor(Math.random()*8.99)];
           // create a div element with class values that map to the corresponding css classes
           const newCat = document.createElement("div");
           newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
@@ -27,7 +27,7 @@ const game = {
           // append the cat to the dom?
           document.querySelector("#house").appendChild(newCat);
           // if a user clicks on one of their cats, trigger checkForMatch() on the cat selected
-          newCat.addEventListener("click", this.checkForMatch);
+          newCat.addEventListener("click", game.checkForMatch);
      },
 
      makeCpuCat() {
@@ -35,9 +35,9 @@ const game = {
           // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
 
           // select a random mood, save to variable newCatMood
-          const newCatMood = this.cats.moods[Math.floor(Math.random()*4)];
+          const newCatMood = this.cats.moods[Math.floor(Math.random()*3.99)];
           // select a random color, save to variable newCatColor
-          const newCatColor = this.cats.colors[Math.floor(Math.random()*9)];
+          const newCatColor = this.cats.colors[Math.floor(Math.random()*8.99)];
           // create a div element with class values that map to the corresponding css classes
           const newCat = document.createElement("div");
           newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
@@ -175,17 +175,32 @@ const game = {
      // Trigger the end of game result screen
      endGame() {
           // When the computer or user runs out of cats, trigger the end of game screen
+          const playerHand = document.querySelector("#house").childNodes
+          const cpuHand = document.querySelector("#cpuContainer").childNodes
+          
+          // If the player's hand is empty, trigger a "You win!" alert.
+          if (playerHand.length === 0) {
+               alert("You win!");
+          }
+          // Else if the computer's hand is empty, trigger a "Computer wins!" alert.
+          else if (cpuHand.length === 0) {
+               alert("Computer wins!");
+          };
+          // If neither is true, do nothing.
+
      },
 
-     // TODO Fix me!
-     // Attempt to make a pass button
+     clickPass() {
+          game.makePlayerCat();
+          setTimeout(game.cpuTurn, 1250);
+     },
+
      passButton() {
           // Find the pass button in the HTML!
           const button = document.querySelector("#pass");
-          this.makePlayerCat();
-          button.addEventListener("click", game.makePlayerCat);
+          // makePlayerCat();
+          button.addEventListener("click", game.clickPass);
      }
-
 };
 
 
@@ -199,7 +214,7 @@ const game = {
 
 // Another attempt to make the pass button
 const passButton = document.querySelector("#pass");
-passButton.addEventListener("click", game.makePlayerCat);
+// passButton.addEventListener("click", game.makePlayerCat);
 
 
 //-------//
@@ -209,5 +224,5 @@ passButton.addEventListener("click", game.makePlayerCat);
 window.onload = () => {
      game.populateHouses();
      game.initCatInBox();
-     // game.passButton();
+     game.passButton();
 };
