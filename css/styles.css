@@ -218,6 +218,23 @@ h1 {
      background-color: #818181
 }
 
+/* MODALS */
+
+.modal {
+     background-color: #999999;
+     position: absolute;
+     width: 90%;
+     height: 85%;
+     top: 10%;
+     left: 5%;
+     transition-timing-function: ease;
+     z-index: 1;
+}
+
+.modal.hide {
+     display: none;
+}
+
 
 /* ANIMATIONS! */
 

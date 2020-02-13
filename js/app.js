@@ -2,13 +2,13 @@ console.log("sanity check");
 
 const game = {
      catBox: [],
-     playerHouse: [],
-     cpuHouse: [],
 
      cats: {
           moods: ["happy", "neutral", "angery", "sleeping"],
           colors: ["pink", "orange", "golden", "green", "blue", "purple", "soot", "biscuits", "ghost"]
      },
+
+     
 
      makePlayerCat() {
           // All cats must come with a mood and a color, and then they need to exist within the HTML.
