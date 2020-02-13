@@ -66,6 +66,10 @@ h1 {
      padding: 0 0 0 35px;
 }
 
+header {
+     height: 80px;
+}
+
 #gameContainer {
      display: flex;
      flex-direction: column;
@@ -158,47 +162,6 @@ h1 {
      animation: shake 1s /* cubic-bezier(.09,.97,.09,.97) both; */
 }
 
-@keyframes shake {
-     10%, 40% {
-          transform: translate3d(1px, 0, 0);
-     }
-
-     20%, 80% {
-          transform: translate3d(-2px, 0, 0);
-     }
-     
-     30%, 50%, 70% {
-          transform: translate3d(4px, 0, 0);
-     }
-     
-     40%, 60% {
-          transform: translate3d(-4px, 0, 0);
-     }
-}
-
-@keyframes boing { 
-     0% {
-       transform: scale(1) translateY(0); 
-     }
-     10% {
-       transform: scale(1.2, 0.6); 
-     }
-     30% { 
-       transform: scale(0.8, 1.1) translateY(-50px); 
-     }
-     50% { 
-       transform: scale(1) translateY(0); 
-     }
-     100% { 
-       transform: translateY(0); 
-     }
-   }
-
-.boing {
-     animation: boing 1.4s;
-     animation-timing-function: ease;
-}
-
 /* Moods */
 
 .happy {
@@ -256,7 +219,7 @@ h1 {
 }
 
 
-/* New Animations */
+/* ANIMATIONS! */
 
 /* RUBBERBAND */
 @keyframes rubberband {
@@ -291,4 +254,51 @@ h1 {
 
 .rubberband {
      animation: rubberband 1.4s;
+}
+
+@keyframes shake {
+     10%, 40% {
+          transform: translate3d(1px, 0, 0);
+     }
+
+     20%, 80% {
+          transform: translate3d(-2px, 0, 0);
+     }
+     
+     30%, 50%, 70% {
+          transform: translate3d(4px, 0, 0);
+     }
+     
+     40%, 60% {
+          transform: translate3d(-4px, 0, 0);
+     }
+}
+
+.shake {
+
+}
+
+/* Best Boing */
+
+@keyframes boing { 
+     0% {
+       transform: scale(1) translateY(0); 
+     }
+     10% {
+       transform: scale(1.2, 0.6); 
+     }
+     30% { 
+       transform: scale(0.8, 1.1) translateY(-50px); 
+     }
+     50% { 
+       transform: scale(1) translateY(0); 
+     }
+     100% { 
+       transform: translateY(0); 
+     }
+   }
+
+.boing {
+     animation: boing 1.4s;
+     animation-timing-function: ease;
 }
