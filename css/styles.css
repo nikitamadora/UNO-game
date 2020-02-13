@@ -198,7 +198,10 @@ p {
 /* Colors */
 
 .pink {
-     background-image: url("../images/pink-ball.png");
+     background-image: url("../images/pink-cat.png");
+     width: 100px;
+     height: 100px;
+     object-fit: fill;
 }
 
 .orange {
@@ -256,6 +259,12 @@ p {
      display: none;
 }
 
+/* GENERAL STUFF! */
+
+/* Broken? */
+.fill {
+     object-fit: fill;
+}
 
 /* ANIMATIONS! */
 
@@ -313,7 +322,7 @@ p {
 }
 
 .shake {
-
+     animation: shake 1s;
 }
 
 /* Best Boing */

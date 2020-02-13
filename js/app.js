@@ -31,6 +31,7 @@ const game = {
           
      },
 
+     // NOT DRY: For deployment, this will stay written as-is, but will be refactored for optimization later.
      makeCpuCat() {
           // All cats must come with a mood and a color, and then they need to exist within the HTML.
           // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
@@ -99,16 +100,24 @@ const game = {
                // Append the user's choice to the DOM as well so it's visible
                document.querySelector("#box").appendChild(userChoice);
                // Check to see if the player's hand is empty. If it is, trigger a win. 
-               
-               // Otherwise, trigger the computer's turn after a delay
-               setTimeout(game.cpuTurn, 1250);
+               if (document.querySelector("#house").childNodes.length === 0) {
+                    game.winGame();
+               } 
+               else {
+                    // Otherwise, trigger the computer's turn after a delay
+                    setTimeout(game.cpuTurn, 1250)
+               };
           }
-          // TODO Stretch Goal: trigger a shake animation on the div.
           else {
                // If the classList of userChoice does not contain "shake", add it
                userChoiceClasses.toggle("shake");
                setTimeout(function() { userChoiceClasses.toggle("shake")}, 1000 );
           };
+     },
+
+     winGame() {
+          // Display modal
+          alert("You win!");
      },
 
      // The computer selects a matching cat(check for match), and then puts it into the box
@@ -135,6 +144,9 @@ const game = {
                     game.catBox.push(cpuChoice);
                     document.querySelector("#box").appendChild(cpuChoice);
                     matched = true;
+                    if (document.querySelector("#cpuContainer").childNodes.length === 0) {
+                         setTimeout(function() { game.loseGame(); }, 500);
+                    }
                     return "done";
                }
                // If there is not a match in the whole array, add one cat to the cpu hand.
@@ -149,6 +161,11 @@ const game = {
 
      endCpuTurn() {
           // Show div that says "Your turn"
+     },
+
+     loseGame() {
+          // Show lose modal
+          alert("Computer wins!");
      },
 
      refillHouse() {
