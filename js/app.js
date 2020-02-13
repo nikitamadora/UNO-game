@@ -20,7 +20,7 @@ const game = {
           const newCatColor = game.cats.colors[Math.floor(Math.random()*8.99)];
           // create a div element with class values that map to the corresponding css classes
           const newCat = document.createElement("div");
-          newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
+          newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat rubberband");
           // add a (temporary) text face to stand in until graphics are made
           const catFace = document.createTextNode(newCatMood);
           newCat.appendChild(catFace);
@@ -28,6 +28,7 @@ const game = {
           document.querySelector("#house").appendChild(newCat);
           // if a user clicks on one of their cats, trigger checkForMatch() on the cat selected
           newCat.addEventListener("click", game.checkForMatch);
+          
      },
 
      makeCpuCat() {
@@ -79,6 +80,13 @@ const game = {
 
      // TODO Make game.catBox[] appear over the cat box div on the browser
 
+     shakeCat() {
+          // Toggle the shake class on
+
+          // After a small delay, toggle it off again so it can be called again
+
+     },
+
      checkForMatch() {
           console.log("click!", this)
           // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
@@ -113,30 +121,25 @@ const game = {
           this.makePlayerCat();
      },
 
-     // TODO 
-     // (When user selects a cat from their house), it's placed into the box. This triggers the computer's turn. This is currently wrapped up in the checkForMatch function, but I'd like to separate them to optimize.
-     putCatInBox() {
-          // move the cat to the top of the catBox[]
-          
-          // game.catBox.push(this)
-     },
-
      // The computer selects a matching cat(check for match), and then puts it into the box
      cpuTurn() {
-          // CPU hand exists within the dom html
-          // Find where it is
+          // Find the computer's hand in the DOM
           const cpuHand = document.querySelector("#cpuContainer").childNodes;
-          // loop through the child nodes
+
+          // Needed for the if...else statement below
           let matched = null;
-          // This loops through the
+
+          // Loop through the computer's hand
           for (let i = 0; i < cpuHand.length; i++) {
+               // Cat selected by the loop...
                const cpuChoice = cpuHand[i];
-               // retrieve a classList from the element
+               // Retrieve a classList from the cat element
                const catClasses = cpuChoice.classList;
-               // find the top cat element
+               // Find the cat at the top of the box
                const topCat = game.catBox[game.catBox.length - 1]; 
-               // retrieve the classList from the top cat
+               // Retrieve a classList from the cat in the box
                const topCatClasses = topCat.classList;
+
                // Compare the classes for a match! If there is one, add that cat to the top of the box.
                if (catClasses[0] === topCatClasses[0] || catClasses[1] === topCatClasses[1]) {
                     game.catBox.push(cpuChoice);
@@ -202,20 +205,6 @@ const game = {
           button.addEventListener("click", game.clickPass);
      }
 };
-
-
-
-
-
-
-
-
-
-
-// Another attempt to make the pass button
-const passButton = document.querySelector("#pass");
-// passButton.addEventListener("click", game.makePlayerCat);
-
 
 //-------//
 // On Page Load, Build the Board //
