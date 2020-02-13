@@ -107,14 +107,15 @@ const game = {
           if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
                game.catBox.push(userChoice);
                document.querySelector("#box").appendChild(userChoice);
-               // game.cpuTurn();
+               // Toggle off the animation?
                setTimeout(game.cpuTurn, 1250);
-          };
-          // Otherwise, do nothing
+          }
           // TODO Stretch Goal: trigger a shake animation on the div.
-          // else {
-
-          // };
+          else {
+               // If the classList of userChoice does not contain "shake", add it
+               userChoiceClasses.toggle("shake");
+               setTimeout(function() { userChoiceClasses.toggle("shake")}, 1000 );
+          };
      },
 
      passTurn() {
