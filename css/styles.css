@@ -53,9 +53,13 @@ table {
 /* GLOBAL */
 
 body {
-     /* padding: 35px; */
+     /* padding: 5%; */
      /* display: flex; */
-     color: aliceblue;
+     color: #616161;
+}
+
+header {
+     height: 80px;
 }
 
 h1 {
@@ -64,10 +68,6 @@ h1 {
      font-size: 32px;
      color: #818181;
      padding: 0 0 0 35px;
-}
-
-header {
-     height: 80px;
 }
 
 #gameContainer {
