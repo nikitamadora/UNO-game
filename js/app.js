@@ -19,21 +19,14 @@ const game = {
           // create a div element with class values that map to the corresponding css classes
           const newCat = document.createElement("div");
           newCat.setAttribute("class", newCatColor + " " + newCatMood + " cat rubberband");
-          // add a (temporary) text face to stand in until graphics are made
-          // const catFace = document.createTextNode(newCatMood);
-          // newCat.appendChild(catFace);
           // append the cat to the dom
           document.querySelector("#house").appendChild(newCat);
           // if a user clicks on one of their cats, trigger checkForMatch() on the cat selected
-          newCat.addEventListener("click", game.checkForMatch);
-          
+          newCat.addEventListener("click", game.checkForMatch);   
      },
 
      // NOT DRY: For deployment, this will stay written as-is, but will be refactored for optimization later.
      makeCpuCat() {
-          // All cats must come with a mood and a color, and then they need to exist within the HTML.
-          // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
-
           // select a random mood, save to variable newCatMood
           const newCatMood = this.cats.moods[Math.floor(Math.random()*3.99)];
           // select a random color, save to variable newCatColor
@@ -41,12 +34,8 @@ const game = {
           // create a div element with class values that map to the corresponding css classes
           const newCat = document.createElement("div");
           newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
-          // add a (temporary) text face to stand in until graphics are made
-          // const catFace = document.createTextNode(newCatMood);
-          // newCat.appendChild(catFace);
-          // append the cat to the dom?
+          // append the cat to the dom
           document.querySelector("#cpuContainer").appendChild(newCat);
-          
      },
 
      // Fill the computer house and the player's house with cats!
@@ -90,7 +79,7 @@ const game = {
           // get the classList of the userChoice
           const userChoiceClasses = userChoice.classList;
 
-          // This is hacked together, brute force way to add cats to the box. Another method is to loop through the arrays to check for a match within the whole arrays.
+          // This is a hacked together, brute force way to add cats to the box. Another method is to loop through the arrays to check for a match within the whole arrays.
           if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[0] === userChoiceClasses[1] || topCatClasses[1] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
                // If there's a match, push the user's choice to the top of the catBox array
                game.catBox.push(userChoice);
