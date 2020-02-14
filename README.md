@@ -1,8 +1,8 @@
+#stubborn kittens
+##Single Player (vs AI) JavaScript Game
+##by Nikita Madora
 
-     2-Player UNO GAME
-     by Nikita Madora
-
-WHAT IS THIS PROJECT?
+##WHAT IS THIS PROJECT?
 
 
 WHY DID I MAKE IT?
