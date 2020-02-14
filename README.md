@@ -13,7 +13,7 @@
      The cats are stubborn, though! They will only go into the box if they either match the **breed** of the cat most recently placed in the box, or if they're in the same **mood** as the previous cat.
 
      It makes sense.
-     ![shipit](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/shipit.png)
+![shipit](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/shipit.png)
 
 ### WHY DID I MAKE IT?
      This project was built so that I could learn by doing! After learning some of the fundamentals of HTML, CSS, and JavaScript, building this game was a way for me to bridge my understanding of the three, and get to know the languages through a realistic application. The challenge was to complete it in under five days, shipping a usable, aesthetically pleasant UI with AI logic.
