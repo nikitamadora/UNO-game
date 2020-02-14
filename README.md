@@ -72,7 +72,8 @@
           - Photoshop
           - Procreate
           
-          And a special shout-out to **GoodNotes** for their wonderfully intuitive UI, smooth, and delightful note-taking app for iPad.
+          And a special shout-out to **GoodNotes** for their wonderfully intuitive UI, smooth, 
+          and delightful note-taking app for iPad.
 
 
 ### APPROACH TAKEN
@@ -80,31 +81,45 @@
           - Good old fashioned brainstorming!
           - Wireframing
           - Writing up user stories
-          - Breaking down user stories into digestible, programmable steps
+          - Breaking down user stories into digestible, programmable steps.. 
+               sometimes without panicking (This was my greatest challenge, and also
+               my favorite win)
           - Pseudocoding
           - Coding and testing in small pieces, then building on those pieces
-          - Obsessive Commits
+          - Obsessively Committing
           - Equally obsessive Googling
           - Drinking loads of coffee, but also sleeping
           - Squishing lots of digital cats
 
 #### Function First
-     I approached the project with a *function first* mindset. I believe that, though design is fundamentally important, it doesn't matter how pretty an app is if it doesn't work at all. In other words, I let the game look terrible until the functionality was sound, and then I put the graphics together during a polishing process on the last day. The result is a cute, playable game!
+     I approached the project with a <em>function first</em> mindset. I believe that, 
+     though design is fundamentally important, it doesn't matter how pretty an app is 
+     if it doesn't work. As such, I let the game look terrible until the functionality was 
+     sound, and then I put the graphics together during a polishing process on the last day. 
+     The result is a cute, playable game!
      
 #### JS/Dom Manipulation == Priority
      I also wanted to use as much JavaScript as possible, so I built out the game board and many of the page elements through the DOM. A lot of the original code is redundant, but my focus was on making it functional before I go back and refactor it to be cleaner and easier to scale or maintain.
 
 #### Challenges and Triumphs
 ##### Challenges First!
-     - Whiteboarding: Laying out the bones of the project proved more challenging than I expected. Once I figured out how to lay it out, though, it started to move fairly quickly. 
-     - Organization: My functions felt verbose and disorganized. Gaining momentum in writing them was tough, **because I kept getting hung up on organization.** ie. using classes vs. objects, etc.
+     - Whiteboarding: Laying out the bones of the project proved more challenging 
+          than I expected. Once I figured out how to lay it out, though, it 
+          started to move fairly quickly. 
+     - Organization: My functions felt verbose and disorganized. Gaining momentum in 
+          writing them was tough, **because I kept getting hung up on organization.** 
+          ie. using classes vs. objects, etc.
      - CSS is harder than it looks
 
 ##### Triumphs!
-     - Time Management! I kept my MVP reasonable, and had time for lots of stretch goals!
-     - Troubleshooting issues felt intuitive, which was also surprising.
+     - Scope! Time Management! I kept my MVP reasonable, so had time for lots of stretch goals,
+          and to add complexity over time without getting daunted by the scope my MVP.
+     - Troubleshooting issues felt intuitive, which was also surprising. I was often able to find
+          solutions fairly quickly, and I learned a ton about built-in functionality of each
+          language.
      - Building a modal is easier than I thought
-     - Animations! I managed to get animations in
+     - Animations! I managed to get animations in, and quicker than I thought I could!
+     - 
 
 
 ### INSTALLATION INSTRUCTIONS
@@ -113,11 +128,16 @@
 
 ### UNSOLVED/KNOWN ISSUES
      - The **end game alert is rudimentary.**
-     - **Users can currently play an unlimited amount of cats** in the span of one turn if they click quickly enough.
-     - The computer's hand shows! This is clearly a feature, not a bug. >.> On that note, see features for more details on why I didn't block out the computer's cats!
+     - **Users can currently play an unlimited amount of cats** in the span of one turn 
+          if they click quickly enough.
+     - The computer's hand shows! This is clearly a feature, not a bug. >.> 
+          On that note, see features for more details on why I didn't block out 
+          the computer's cats!
 
 ### FUTURE RELEASE FEATURES
-     - **Rework of core game functionality.** Rather than have a computer's hand at all, there will be a timer, or an event triggered by the user, that will push a random number of cats from the box back into the user's house. 
+     - **Rework of core game functionality.** Rather than have a computer's hand at all, 
+          there will be a timer, or an event triggered by the user, that will push a 
+          random number of cats from the box back into the user's house. 
      - Tooltip for how to play
      - A replay button
      - Graphic for the player's house (maybe)
