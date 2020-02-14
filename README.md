@@ -53,7 +53,7 @@
 
 
 ### APPROACH TAKEN
-     To build this game, I took the following steps:
+#### To build this game, I took the following steps:
           - Good old fashioned brainstorming!
           - Wireframing
           - Writing up user stories
@@ -65,9 +65,24 @@
           - Drinking loads of coffee, but also sleeping
           - Squishing lots of digital cats
 
+#### Function First
      I approached the project with a *function first* mindset. I believe that, though design is fundamentally important, it doesn't matter how pretty an app is if it doesn't work at all. In other words, I let the game look terrible until the functionality was sound, and then I put the graphics together during a polishing process on the last day. The result is a cute, playable game!
      
+#### JS/Dom Manipulation == Priority
      I also wanted to use as much JavaScript as possible, so I built out the game board and many of the page elements through the DOM. A lot of the original code is redundant, but my focus was on making it functional before I go back and refactor it to be cleaner and easier to scale or maintain.
+
+#### Challenges and Triumphs
+##### Challenges First!
+     - Whiteboarding: Laying out the bones of the project proved more challenging than I expected. Once I figured out how to lay it out, though, it started to move fairly quickly. 
+     - Organization: My functions felt verbose and disorganized. Gaining momentum in writing them was tough, **because I kept getting hung up on organization.** ie. using classes vs. objects, etc.
+     - CSS is harder than it looks
+
+##### Triumphs!
+     - Time Management! I kept my MVP reasonable, and had time for lots of stretch goals!
+     - Troubleshooting issues felt intuitive, which was also surprising.
+     - Building a modal is easier than I thought
+     - Animations! I managed to get animations in
+
 
 ### INSTALLATION INSTRUCTIONS
      Simply open the link in any modern browser! No special installation is required.
