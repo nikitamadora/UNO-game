@@ -20,11 +20,11 @@ const game = {
           const newCatColor = game.cats.colors[Math.floor(Math.random()*8.99)];
           // create a div element with class values that map to the corresponding css classes
           const newCat = document.createElement("div");
-          newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat rubberband");
+          newCat.setAttribute("class", newCatColor + " " + newCatMood + " cat rubberband");
           // add a (temporary) text face to stand in until graphics are made
-          const catFace = document.createTextNode(newCatMood);
-          newCat.appendChild(catFace);
-          // append the cat to the dom?
+          // const catFace = document.createTextNode(newCatMood);
+          // newCat.appendChild(catFace);
+          // append the cat to the dom
           document.querySelector("#house").appendChild(newCat);
           // if a user clicks on one of their cats, trigger checkForMatch() on the cat selected
           newCat.addEventListener("click", game.checkForMatch);
@@ -44,8 +44,8 @@ const game = {
           const newCat = document.createElement("div");
           newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
           // add a (temporary) text face to stand in until graphics are made
-          const catFace = document.createTextNode(newCatMood);
-          newCat.appendChild(catFace);
+          // const catFace = document.createTextNode(newCatMood);
+          // newCat.appendChild(catFace);
           // append the cat to the dom?
           document.querySelector("#cpuContainer").appendChild(newCat);
           
@@ -68,8 +68,8 @@ const game = {
           const newCat = document.createElement("div");
           newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
           // add a (temporary) text face to stand in until graphics are made
-          const catFace = document.createTextNode(newCatMood);
-          newCat.appendChild(catFace);
+          // const catFace = document.createTextNode(newCatMood);
+          // newCat.appendChild(catFace);
           this.catBox.push(newCat);
           document.querySelector("#box").appendChild(newCat);
      },
@@ -92,9 +92,9 @@ const game = {
 
           // get the classList of the userChoice
           const userChoiceClasses = userChoice.classList;
-
-          // Since the first index value of each class array is always a mood class, and the second is always a color, only two comparisons are necessary. :)
-          if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
+          console.log(topCatClasses, userChoiceClasses);
+          // This is hacked together, brute force way to add cats to the box. Another method is to loop through the arrays to check for a match within the whole arrays.
+          if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[0] === userChoiceClasses[1] || topCatClasses[1] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
                // If there's a match, push the user's choice to the top of the catBox array
                game.catBox.push(userChoice);
                // Append the user's choice to the DOM as well so it's visible
@@ -140,7 +140,7 @@ const game = {
                const topCatClasses = topCat.classList;
 
                // Compare the classes for a match! If there is one, add that cat to the top of the box.
-               if (catClasses[0] === topCatClasses[0] || catClasses[1] === topCatClasses[1]) {
+               if (catClasses[0] === topCatClasses[0] || catClasses[0] === topCatClasses[1] || catClasses[1] === topCatClasses[0] || catClasses[1] === topCatClasses[1]) {
                     game.catBox.push(cpuChoice);
                     document.querySelector("#box").appendChild(cpuChoice);
                     matched = true;

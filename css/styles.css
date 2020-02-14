@@ -173,67 +173,88 @@ p {
      height: 100px;
      font-weight: 100;
      font-size: 18px;
-     border-radius: 40%;
+     /* border-radius: 40%; */
      margin: -10px;
+}
+
+/* Image Container for Cats */
+.imageContainer {
+     position: relative;
+     width: 100px;
+     height: 100px;
 }
 
 /* Moods */
 
-.happy {
-     font-size: 20px;
+/* The before pseudoselector will allow a second image to show over the background image. It is filled out with blank content so that it renders, and given a few properties for the face image */
+.happy:before {
+     background-image: url(../images/happy-face.png);
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
 }
 
-.neutral {
-     font-size: 20px;
+.neutral:before {
+     background-image: url(../images/neutral-face.png);
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
 }
 
-.angery {
-     font-size: 20px;
-}
+.angery:before {
+     background-image: url(../images/angery-face.png);
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
+ }
 
-.sleeping {
-     font-size: 20px;
+.sleeping:before {
+     background-image: url("../images/sleeping-face.png");
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
 }
 
 /* Colors */
 
 .pink {
-     background-image: url("../images/pink-cat.png");
-     width: 100px;
-     height: 100px;
-     object-fit: fill;
+     background-image: url("../images/pink-fluff.png");
 }
 
 .orange {
-     background-image: url("../images/orange-ball.png");
+     background-image: url("../images/orange-fluff.png");
 }
 
 .golden {
-     background-color: goldenrod;
+     background-image: url("../images/golden-fluff.png");
 }
 
 .green {
-     background-image: url("../images/green-ball.png");
+     background-image: url("../images/green-fluff.png");
 }
 
 .blue {
-     background-color: teal;
+     background-image: url("../images/blue-fluff.png");
 }
 
 .purple {
-     background-image: url("../images/purple-ball.png");
+     background-image: url("../images/purpur-fluff.png");
 }
 
 .soot {
-     background-color: #181818;
+     background-image: url("../images/soot-fluff.png");
 }
 
 .biscuits {
-     background-color: beige;
+     background-image: url("../images/biscuits-fluff.png");
 }
 
 .ghost {
-     background-color: #818181
+     background-image: url("../images/ghost-fluff.png");
 }
 
 /* MODALS */
