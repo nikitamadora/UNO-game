@@ -1,20 +1,15 @@
-///////////////////////////
+
      2-Player UNO GAME
      by Nikita Madora
-///////////////////////////
-/////////////---------------------------------
+
 WHAT IS THIS PROJECT?
-/////////////---------------------------------
 
 
-/////////////---------------------------------
 WHY DID I MAKE IT?
-/////////////---------------------------------
 
 
-/////////////---------------------------------
 USER STORIES
-/////////////---------------------------------
+
 
      i.        The user clicks "START" button to start the game
 
@@ -40,32 +35,30 @@ USER STORIES
 
      xii.      When the user loses to the computer, the game screen fades and darkens, and a boxed message pops up that reads "Womp Womp, Beat By A Dumb AI". A button fades in that reads "Retry?"
 
-/////////////---------------------------------
+
 TECHNOLOGIES USED
-/////////////---------------------------------
 
 
-/////////////---------------------------------
+
+
 APPROACH TAKEN
-/////////////---------------------------------
+
 Minimum Viable Product:
 To start...
 
 
-/////////////---------------------------------
 INSTALLATION INSTRUCTIONS
-/////////////---------------------------------
 
-/////////////---------------------------------
+
+
 UNSOLVED PROBLEMS
-/////////////---------------------------------
 
-/////////////---------------------------------
+
+
 OTHER COMPONENTS PREVIOUSLY INDICATED (if applicable)
-/////////////---------------------------------
 
-/////////////---------------------------------
+
 WIREFRAMES
-/////////////---------------------------------
+![og wireframe](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/uno-wireframe.jpg)
 
      Available in the images/ directory.
