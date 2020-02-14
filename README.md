@@ -59,6 +59,9 @@ To start...
 
 
 ## WIREFRAMES
-![og wireframe](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/uno-wireframe.jpg)
+### Wireframe for the stubborn cats Rebrand
+![stubborn cats wireframe] (https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/stubborn-kittens-wireframe-6.jpg) 
 
-     Available in the images/ directory.
+### Original Wireframe
+The concept started as an UNO copycat, and then, because cards don't thrill me, I changed the subject matter to squishy cats.
+![og wireframe](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/uno-wireframe.jpg)
