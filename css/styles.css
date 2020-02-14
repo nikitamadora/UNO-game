@@ -66,7 +66,7 @@ h1 {
      font-family: "helvetica neue", sans-serif;
      font-weight: 100;
      font-size: 32px;
-     color: #818181;
+     color: #333;
      padding: 0 0 0 35px;
 }
 
@@ -283,7 +283,7 @@ p {
 /* MODALS */
 
 .modal {
-     background-color: gainsboro;
+     background: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
      position: absolute;
      width: 90%;
      height: 87%;
