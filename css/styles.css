@@ -115,7 +115,6 @@ p {
 }
 
 #box {
-     background-image: url("../images/box.png");
      /* background-color: gray; */
      width: 100px;
      height: 100px;
@@ -128,7 +127,17 @@ p {
      /* Position all cats in the box absolutely, relative to the box parent */
      position: absolute;
      /* box-shadow: 1px 1px 1px rgba(0,0,0,.3); */
- }
+}
+
+#box:after {
+     background-image: url("../images/box.png");
+     content: '';
+     height: 100px;
+     width: 100px;
+     display: block;
+     position: absolute;
+     right: 16px;
+}
 
 #pass {
      width: 80px;
@@ -177,13 +186,6 @@ p {
      margin: -10px;
 }
 
-/* Image Container for Cats */
-.imageContainer {
-     position: relative;
-     width: 100px;
-     height: 100px;
-}
-
 /* Moods */
 
 /* The before pseudoselector will allow a second image to show over the background image. It is filled out with blank content so that it renders, and given a few properties for the face image */
@@ -212,7 +214,7 @@ p {
  }
 
 .sleeping:before {
-     background-image: url("../images/sleeping-face.png");
+     background-image: url(../images/sleeping-face.png);
      content: '';
      display: block;
      width: 100%;
@@ -280,12 +282,6 @@ p {
      display: none;
 }
 
-/* GENERAL STUFF! */
-
-/* Broken? */
-.fill {
-     object-fit: fill;
-}
 
 /* ANIMATIONS! */
 
