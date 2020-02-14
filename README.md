@@ -1,14 +1,14 @@
-#stubborn kittens
-##Single Player (vs AI) JavaScript Game
-##by Nikita Madora
+# stubborn kittens
+## A Delightful Single Player v A.I. JavaScript Game
+## by Nikita Madora
 
-##WHAT IS THIS PROJECT?
-
-
-WHY DID I MAKE IT?
+## WHAT IS THIS PROJECT?
 
 
-USER STORIES
+## WHY DID I MAKE IT?
+
+
+## USER STORIES
 
 
      i.        The user clicks "START" button to start the game
@@ -36,29 +36,29 @@ USER STORIES
      xii.      When the user loses to the computer, the game screen fades and darkens, and a boxed message pops up that reads "Womp Womp, Beat By A Dumb AI". A button fades in that reads "Retry?"
 
 
-TECHNOLOGIES USED
+## TECHNOLOGIES USED
 
 
 
 
-APPROACH TAKEN
+## APPROACH TAKEN
 
 Minimum Viable Product:
 To start...
 
 
-INSTALLATION INSTRUCTIONS
+## INSTALLATION INSTRUCTIONS
 
 
 
-UNSOLVED PROBLEMS
+## UNSOLVED PROBLEMS
 
 
 
-OTHER COMPONENTS PREVIOUSLY INDICATED (if applicable)
+## OTHER COMPONENTS PREVIOUSLY INDICATED (if applicable)
 
 
-WIREFRAMES
+## WIREFRAMES
 ![og wireframe](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/uno-wireframe.jpg)
 
      Available in the images/ directory.
