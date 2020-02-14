@@ -41,11 +41,12 @@
      ii.       The game deals seven cats to the player, which are visible at the bottom of the screen, 
                     and places a [randomly generated] cat immediately into the box. The user compares 
                     their cats against the one at the top of the box, looking for match against the 
-                    cat's **color** (pink, orange, goldenrod, green, blue, purple, biscuit, gray, or soot), or the 
-                    cat's **mood** (happy, angry, neutral, or sleeping).
+                    cat's **color** (pink, orange, goldenrod, green, blue, purple, biscuit, gray, or soot), 
+                    or the cat's **mood** (happy, angry, neutral, or sleeping).
 
      iii.      When the user clicks an cat that doesn't match, it shakes, then bounces back (happily). 
-                    The user then either selects an applicable cat, or else takes a new cat home by clicking the "draw" button.
+                    The user then either selects an applicable cat, or else takes a new cat home by 
+                    clicking the "draw" button.
 
      iv.       When the user clicks a cat that matches, the cat enters the box and bounces (happily). 
                     This triggers the computer's turn.
