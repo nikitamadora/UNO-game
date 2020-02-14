@@ -60,7 +60,7 @@ To start...
 
 ## WIREFRAMES
 ### Wireframe for the stubborn cats Rebrand
-![stubborn cats wireframe] (https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/stubborn-kittens-wireframe-6.jpg) 
+![sc wireframe](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/stubborn-kittens-wireframe-6.jpg)
 
 ### Original Wireframe
 The concept started as an UNO copycat, and then, because cards don't thrill me, I changed the subject matter to squishy cats.
