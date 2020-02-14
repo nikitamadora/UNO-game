@@ -1,5 +1,3 @@
-console.log("sanity check");
-
 const game = {
      catBox: [],
 
@@ -78,7 +76,6 @@ const game = {
 
      // Player's whole turn
      checkForMatch() {
-          console.log("click!", this)
           // If the mood or color matches the card at the top of the box array, run the putCatInBox function.
 
           // variable that references the card at the top of the box array
@@ -92,7 +89,7 @@ const game = {
 
           // get the classList of the userChoice
           const userChoiceClasses = userChoice.classList;
-          console.log(topCatClasses, userChoiceClasses);
+          
           // This is hacked together, brute force way to add cats to the box. Another method is to loop through the arrays to check for a match within the whole arrays.
           if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[0] === userChoiceClasses[1] || topCatClasses[1] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
                // If there's a match, push the user's choice to the top of the catBox array
