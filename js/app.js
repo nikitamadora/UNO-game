@@ -89,7 +89,7 @@ const game = {
 
           // get the classList of the userChoice
           const userChoiceClasses = userChoice.classList;
-          
+
           // This is hacked together, brute force way to add cats to the box. Another method is to loop through the arrays to check for a match within the whole arrays.
           if (topCatClasses[0] === userChoiceClasses[0] || topCatClasses[0] === userChoiceClasses[1] || topCatClasses[1] === userChoiceClasses[0] || topCatClasses[1] === userChoiceClasses[1]) {
                // If there's a match, push the user's choice to the top of the catBox array
@@ -210,12 +210,21 @@ const game = {
      }
 };
 
+
 //-------//
-// On Page Load, Build the Board //
+// Build the Board //
 //-------//
 
-window.onload = () => {
+const buildBoard = () => {
+     document.querySelector(".startScreen").classList.toggle("hide");
      game.populateHouses();
      game.initCatInBox();
      game.passButton();
 };
+
+//-------//
+// Start Game
+//-------//
+
+const startButton  = document.querySelector("#startButton");
+startButton.addEventListener("click", buildBoard);
