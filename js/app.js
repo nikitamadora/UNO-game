@@ -19,6 +19,7 @@ const game = {
           newCat.setAttribute("class", newCatColor + " " + newCatMood + " cat rubberband");
           return newCat;
      },
+     
 
      // Make a cat for the player's hand
      makePlayerCat() {
