@@ -1,41 +1,41 @@
 const game = {
+     // Container for the discarded cats
      catBox: [],
 
+     // Cat options
      cats: {
           moods: ["happy", "neutral", "angery", "sleeping"],
           colors: ["pink", "orange", "golden", "green", "blue", "purple", "soot", "biscuits", "ghost"]
      },
 
-
-
-     makePlayerCat() {
-          // All cats must come with a mood and a color, and then they need to exist within the HTML.
-          // The will have css attributes that make them appear, and moving them around the page happens through the DOM.
-
-          // select a random mood, save to variable newCatMood
+     // Make a new cat!
+     makeNewCat() {
+          // Select a random mood and color
           const newCatMood = game.cats.moods[Math.floor(Math.random()*3.99)];
-          // select a random color, save to variable newCatColor
           const newCatColor = game.cats.colors[Math.floor(Math.random()*8.99)];
-          // create a div element with class values that map to the corresponding css classes
+          // Make a div to hold the cat
           const newCat = document.createElement("div");
+          // Give it classes that map to the CSS file
           newCat.setAttribute("class", newCatColor + " " + newCatMood + " cat rubberband");
-          // append the cat to the dom
-          document.querySelector("#house").appendChild(newCat);
-          // if a user clicks on one of their cats, trigger checkForMatch() on the cat selected
-          newCat.addEventListener("click", game.checkForMatch);   
+          return newCat;
      },
 
-     // NOT DRY: For deployment, this will stay written as-is, but will be refactored for optimization later.
+     // Make a cat for the player's hand
+     makePlayerCat() {
+          // Make a cat
+          const playerCat = this.makeNewCat();
+          // Listen for clicks on player cats. If they click, trigger checkForMatch()
+          playerCat.addEventListener("click", game.checkForMatch);
+          // Add the cat to the player's house on the DOM
+          document.querySelector("#house").appendChild(playerCat);  
+     },
+
+     // Make a cat for the computer's hand
      makeCpuCat() {
-          // select a random mood, save to variable newCatMood
-          const newCatMood = this.cats.moods[Math.floor(Math.random()*3.99)];
-          // select a random color, save to variable newCatColor
-          const newCatColor = this.cats.colors[Math.floor(Math.random()*8.99)];
-          // create a div element with class values that map to the corresponding css classes
-          const newCat = document.createElement("div");
-          newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
-          // append the cat to the dom
-          document.querySelector("#cpuContainer").appendChild(newCat);
+          // Make a cat
+          const cpuCat = this.makeNewCat();
+          // Add the cat to the computer's house on the DOM
+          document.querySelector("#cpuContainer").appendChild(cpuCat);
      },
 
      // Fill the computer house and the player's house with cats!
