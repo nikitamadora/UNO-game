@@ -19,7 +19,7 @@ const game = {
           newCat.setAttribute("class", newCatColor + " " + newCatMood + " cat rubberband");
           return newCat;
      },
-     
+
 
      // Make a cat for the player's hand
      makePlayerCat() {
@@ -47,22 +47,12 @@ const game = {
           };
      },
 
+     // Put a cat in the box at the beginning of the game
      initCatInBox() {
-          // select a random mood, save to variable newCatMood
-          const newCatMood = this.cats.moods[Math.floor(Math.random()*4)];
-          // select a random color, save to variable newCatColor
-          const newCatColor = this.cats.colors[Math.floor(Math.random()*9)];
-          // create a div element with class values that map to the corresponding css classes
-          const newCat = document.createElement("div");
-          newCat.setAttribute("class", newCatMood + " " + newCatColor + " cat");
-          // add a (temporary) text face to stand in until graphics are made
-          // const catFace = document.createTextNode(newCatMood);
-          // newCat.appendChild(catFace);
-          this.catBox.push(newCat);
-          document.querySelector("#box").appendChild(newCat);
+          const boxCat = this.makeNewCat();
+          this.catBox.push(boxCat);
+          document.querySelector("#box").appendChild(boxCat);
      },
-
-     // TODO Make game.catBox[] appear over the cat box div on the browser
 
      // Player's whole turn
      checkForMatch() {
