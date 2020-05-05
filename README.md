@@ -4,6 +4,10 @@
 #### Alternative title for v1.0: foster frenzy
 <hr>
 
+### LIVE WEBSITE
+[stubborn kittens](https://nikitamadora.github.io/stubborn-kittens/ "stubborn kittens Homepage")
+     
+     
 ### WHAT IS THIS PROJECT?
      This is a joyful game of whimsy, built with pure, unadulterated vanilla JavaScript, 
      HTML, and CSS. It was created as a solo project by Nikita Madora (me!).
